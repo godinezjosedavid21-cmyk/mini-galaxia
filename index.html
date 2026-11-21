@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>COSMIC ORIGIN | El nacimiento de una galaxia</title>
+
+	<link rel="stylesheet" href="style.css">
+
+	<script type="importmap">
+	{
+		"imports": {
+			"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+		}
+	}
+	</script>
+</head>
+<body>
+
+	<div id="universe"></div>
+
+	<div class="intro" id="intro">
+		<p class="eyebrow">UNA HISTORIA DEL UNIVERSO</p>
+		<h1>COSMIC <span>ORIGIN</span></h1>
+		<p class="subtitle">El nacimiento de una galaxia</p>
+		<button id="startButton">INICIAR EXPERIENCIA</button>
+		<p class="small-text">Una travesía a través del nacimiento del cosmos</p>
+	</div>
+
+	<div class="hud" id="hud">
+		<div class="hud-top">
+			<span id="sceneName">EL ORIGEN</span>
+			<span id="timeText">00:00 / 01:15</span>
+		</div>
+
+		<div class="progress-container">
+			<div id="progress"></div>
+		</div>
+
+		<div class="hud-bottom">
+			<span id="description">Todo comienza en la oscuridad...</span>
+			<button id="replayButton">REINICIAR ↻</button>
+		</div>
+	</div>
+
+	<div class="ending" id="ending">
+		<p>Y ASÍ COMENZÓ TODO</p>
+		<h2>UNIVERSO</h2>
+		<button id="againButton">VOLVER A EXPERIMENTAR</button>
+	</div>
+
+	<script type="module" src="script.js"></script>
+</body>
+</html>

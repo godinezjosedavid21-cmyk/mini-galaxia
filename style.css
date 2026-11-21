@@ -1,0 +1,165 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #000;
+	color: white;
+	overflow: hidden;
+	font-family: Arial, sans-serif;
+}
+
+#universe {
+	position: fixed;
+	inset: 0;
+	z-index: 0;
+}
+
+canvas {
+	display: block;
+}
+
+.intro, .ending {
+	position: fixed;
+	inset: 0;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: radial-gradient(
+		circle,
+		rgba(20, 5, 45, 0.25),
+		rgba(0, 0, 0, 0.88)
+	);
+	transition: opacity 1.5s ease;
+}
+
+.intro h1 {
+	font-size: clamp(38px, 9vw, 90px);
+	letter-spacing: 12px;
+	margin: 20px 0;
+	text-shadow: 0 0 30px #863bff;
+}
+
+.intro h1 span {
+	color: #c084fc;
+}
+
+.eyebrow {
+	color: #b99cff;
+	letter-spacing: 6px;
+	font-size: 11px;
+}
+
+.subtitle {
+	color: #b8b8c9;
+	letter-spacing: 3px;
+	margin-bottom: 40px;
+}
+
+button {
+	background: transparent;
+	color: white;
+	border: 1px solid #9d6cff;
+	padding: 16px 30px;
+	letter-spacing: 3px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+button:hover {
+	background: #8c42e8;
+	box-shadow: 0 0 30px #8c42e8;
+}
+
+.small-text {
+	color: #777;
+	font-size: 11px;
+	margin-top: 25px;
+}
+
+.hud {
+	position: fixed;
+	z-index: 3;
+	bottom: 35px;
+	left: 5%;
+	width: 90%;
+	opacity: 0;
+	transition: opacity 1s;
+	pointer-events: none;
+}
+
+.hud button {
+	pointer-events: auto;
+}
+
+.hud-top, .hud-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 15px;
+	font-size: 11px;
+	letter-spacing: 2px;
+	color: #c4b1ff;
+}
+
+.progress-container {
+	height: 3px;
+	background: #292035;
+	margin: 15px 0;
+	overflow: hidden;
+}
+
+#progress {
+	height: 100%;
+	width: 0%;
+	background: linear-gradient(
+		90deg, #8c42ff, #00d9ff, #ff65d4
+	);
+	box-shadow: 0 0 15px #a35bff;
+}
+
+.ending {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.ending p {
+	color: #c49aff;
+	letter-spacing: 5px;
+	font-size: 11px;
+}
+
+.ending h2 {
+	font-size: clamp(40px, 9vw, 90px);
+	letter-spacing: 15px;
+	margin: 20px;
+	text-shadow: 0 0 35px #9b54ff;
+}
+
+.ending button {
+	margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+	.intro h1 {
+		letter-spacing: 5px;
+	}
+
+	.subtitle {
+		font-size: 12px;
+	}
+
+	.hud-bottom {
+		font-size: 9px;
+	}
+
+	.hud button {
+		padding: 10px;
+		font-size: 9px;
+	}
+}
